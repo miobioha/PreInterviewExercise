@@ -7,7 +7,7 @@ namespace Banking.SharedKernel
     {
         public static async Task ExecuteWithRetryAsync(Action execute, int retry, TimeSpan delay, Predicate<Exception> isTransient)
         {
-            for (int currentRetry = 0; ; currentRetry++)
+            for (int currentRetry = 0; ;)
             {
                 try
                 {
@@ -19,7 +19,7 @@ namespace Banking.SharedKernel
                 {
                     currentRetry++;
 
-                    if (currentRetry > retry || !isTransient(ex))
+                    if (currentRetry >= retry || !isTransient(ex))
                     {
                         throw;
                     }

@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionHelperTestFixture.cs" />
     <Compile Include="CommandBusTestFixture.cs" />
     <Compile Include="EventBusFixture.cs" />
     <Compile Include="EventBusTested.cs" />
