@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Core", "Banking.Core\Banking.Core.csproj", "{6DBA8A03-753C-43B2-BC1F-5617DAD17588}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApiConsumer", "BankApiConsumer\BankApiConsumer.csproj", "{489ED2A7-3E7D-4449-8461-C0CF1FEB833F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApi.Test", "BankApi.Test\BankApi.Test.csproj", "{29D67739-72F5-49A8-B713-141C45107118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreInterviewExercise.IntegrationTests", "PreInterviewExercise.IntegrationTests\PreInterviewExercise.IntegrationTests.csproj", "{EEBEB690-E820-42B2-A542-7AD1E458CEAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{29D67739-72F5-49A8-B713-141C45107118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29D67739-72F5-49A8-B713-141C45107118}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29D67739-72F5-49A8-B713-141C45107118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEBEB690-E820-42B2-A542-7AD1E458CEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBEB690-E820-42B2-A542-7AD1E458CEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBEB690-E820-42B2-A542-7AD1E458CEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBEB690-E820-42B2-A542-7AD1E458CEAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

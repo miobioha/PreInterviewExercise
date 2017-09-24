@@ -31,14 +31,21 @@ namespace Vending.Core
             request.ContentLength = encoding.GetByteCount(requestPayload);
             request.ContentType = "application/json";
 
-            using (Stream requestStream = request.GetRequestStream())
+            try
             {
-                requestStream.Write(encoding.GetBytes(requestPayload), 0, encoding.GetByteCount(requestPayload));
-            }
+                using (Stream requestStream = request.GetRequestStream())
+                {
+                    requestStream.Write(encoding.GetBytes(requestPayload), 0, encoding.GetByteCount(requestPayload));
+                }
 
-            using (var response = (HttpWebResponse) request.GetResponse())
+                using (var response = (HttpWebResponse)request.GetResponse())
+                {
+                    return response.StatusCode == HttpStatusCode.OK;
+                }
+            }
+            catch (WebException)
             {
-                return response.StatusCode == HttpStatusCode.OK;
+                return false;
             }
         }
     }

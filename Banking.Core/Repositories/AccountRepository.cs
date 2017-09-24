@@ -3,8 +3,8 @@ using System.Data.Entity;
 using System.Linq;
 using Banking.Core.Aggregates;
 using Banking.Core.ReadModel.Implementation;
-using System.Data;
 using Banking.Core.Exceptions;
+using System.Data.Entity.Infrastructure;
 
 namespace Banking.Core.Repositories
 {
@@ -41,7 +41,7 @@ namespace Banking.Core.Repositories
             {
                 _context.SaveChanges();
             }
-            catch (DBConcurrencyException)
+            catch (DbUpdateConcurrencyException)
             {
                 throw new ConcurrencyException();
             }
